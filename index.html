@@ -1,12 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    JenkinsPost Digital Dashboad
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<H1>The Jenkins - Site</H1>
+<img src=src="https://www.w3schools.com/images/w3schools_green.jpg" style="width:60px;">
+           
+<!-- Slideshow container -->
+<div class="container center ">
+    <div class="slideshow-container ">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides  center">
+            
+            <img src=src="https://www.w3schools.com/images/w3schools_green.jpg" style="width:600px;">
+           
+        </div>
+
+        <div class="mySlides center">
+            
+            <img src="{% static 'sljenkins975/JenkinsPostDigitalDash/static/sitepages/jettemplate_1.jpeg' %}" style="width:600px;" />
+            
+        </div>
+
+        <div class="mySlides  center">
+            
+            <img src="{% static 'sitepages/jettemplate_3.jpeg' %}" style="width:600px;">
+        </div>
+    <!-- Next and previous buttons -->
+
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+    </div>
+
+</div>
+
+{% endblock %}
