@@ -1,19 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenkins Post Digital Dashboard</title>
+</head>
+<style>
+    * {box-sizing: border-box}
+    
+    .mySlides {display: none}
+    img {vertical-align: middle;}      
+    .column {float: left; width: 50%; padding: 0 10px; }
+/* Remove extra left and right margins, due to padding */
+    .row {margin: 0 -5px;}
 
-    <!-- Load an icon library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <nav class="topnav" id="myTopnav">
-        <div class="title">The Jenkins Cemerony</div>
-        <a href="/"><i class="fa fa-fw fa-home"style=' background-color:transparent'></i>Home</a>
-        <a href="{% url 'rsvp' %}">RSVP</a>
-        <a href="{% url 'us' %}" >About Us</a>
-        <!-- <a href="{% url 'picture' %}">Pictures</a> -->
-        <a href="{% url 'social' %}">Social Media links</a>
-        <!-- <a href="{% url 'about' %}">About Site</a> -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-    </nav>
+/* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .imgr {
+    border-radius: 50%;
+    }
+    .card {
+        
+        padding: 16px;
+        text-align: center;
+        background-color: #576675;
+        color: white;
+    } 
+    .card_text {
+        
+        text-align: center;
+        background-color: #576675;
+        color: white;
+    } 
+    .body {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        /* color: #333; */
+        background-color: #889bae;
+    }
+    body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #889bae;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
 
-<div class="container">
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #889bae;
+            }
+            #container {
+                width: inherit;
+                height: inherit;
+                margin: 0;
+                padding: 0;
+                background-color: pink;
+            }
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
 
-{% block content %}
-{% endblock %}
-</ldiv>
+        /* Slideshow */
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+        background-color: #889bae;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: rgb(12, 1, 1);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: Black;
+        }
+
+        /* Caption text */
+        .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: white;
+        }
+
+        /* Fading animation */
+        .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+        }
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+    .column {width: 100%;display: block;margin-bottom: 20px;}
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {position: absolute;right: 0;top: 0;}
+}
+
+</style>
+<title>The Jenkins</title>
+</head>
+
+
+<body>
+
+<H1>The Jenkins - Site</H1>
+<div class="container ">
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=dGhlamVua2luczk3NUBnbWFpbC5jb20&src=dDFrZWpsdWVkamJwanV1bG45ZWMyNHRpaWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=dWgzOTdmNTE4anU5MjVqNXNucWtxMTZ1dG4yZDdiYWVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MDF1NGlyczE3dGFwOTlzM2lxazA0MTdwZ21qdnE2OHZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%230B8043&color=%23D50000&color=%23E4C441" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div id="openweathermap-widget-11"></div>
+<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4144764',appid: '04741469033a4a2d9f3f36e3346e9036',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
+<!-- Slideshow container -->
+<div class="container center ">
+    <div class="slideshow-container ">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides  center">
+            
+            <img src="https://www.w3schools.com/images/w3schools_green.jpg" style="width:600px;">
+           
+        </div>
+
+        <div class="mySlides center">
+            
+            <img src="{% static 'sljenkins975/JenkinsPostDigitalDash/static/sitepages/jettemplate_1.jpeg' %}" style="width:600px;" />
+            
+        </div>
+
+        <div class="mySlides  center">
+            
+            <img src="{% static 'sitepages/jettemplate_3.jpeg' %}" style="width:600px;">
+        </div>
+    <!-- Next and previous buttons -->
+
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+        <span class="dot" ></span>
+    </div>
+
+</div>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 10000); // Change image every 10 seconds
+    }
+</script>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous">
+</script>
+
+</body>
+</html>
