@@ -23,24 +23,18 @@ header {
 }
 
 /* Create two columns/boxes that floats next to each other */
-nav {
+sidebar {
   float: left;
-  width: 30%;
+  width: 800px;
   height: 700px; /* only for demonstration, should be removed */
   background: #ccc;
-  padding: 20px;
+  padding: 5px;
 }
-
-/* Style the list inside the menu */
-/* nav ul {
-  list-style-type: none;
-  padding: 0;
-} */
 
 article {
   float: left;
   padding: 20px;
-  width: 70%;
+  width: 1040px;
   background-color: #f1f1f1;
   height: 700; /* only for demonstration, should be removed */
 }
@@ -63,16 +57,15 @@ footer {
   display: grid;
   grid-template-columns: auto ;
   background-color: #2196F3;
-  grid-auto-rows: 300px;
+  grid-auto-rows: 350px;
   padding: 1;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
-  
-  font-size: 30px;
-  text-align: center;
+  font-size: 20px;
+  /* text-align: center; */
 }
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
@@ -86,33 +79,48 @@ footer {
 <body>
 
 <header>
-  <h2>Cities</h2>
+  <h2>The Jenkins Digital Dashboard</h2>
 </header>
 
 <section>
-  <nav>
+  <sidebar>
     <div class="grid-container">
-        <div class="grid-item">1</div>
-        <div class="grid-item" id="openweathermap-widget-11">
+        <div class="grid-item">
+          <H1 class="welcomemessage" align="left">
+             <p class="date" id="todaydate"></p>      </H1>
+                <p2 class="dailyquote" >
+             
+            
+            <!--JavaScript code for single Motivational Quote of the Day, http://www.tqpage.com/-->
+            <script language="javascript" src="http://www.quotationspage.com/data/1mqotd.js">
+            </script>
+            <!--End JavaScript Quotations code-->
+</p2>
+        </div>
+        <div class="grid-item" align="center";  top="50%" ><div class="weather"id="openweathermap-widget-11"></div>
          </div>
 
       </div>
     
-  </nav>
+  </sidebar>
   
   <article>
-    <h1>London</h1>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=dGhlamVua2luczk3NUBnbWFpbC5jb20&src=dDFrZWpsdWVkamJwanV1bG45ZWMyNHRpaWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=dWgzOTdmNTE4anU5MjVqNXNucWtxMTZ1dG4yZDdiYWVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MDF1NGlyczE3dGFwOTlzM2lxazA0MTdwZ21qdnE2OHZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%230B8043&color=%23D50000&color=%23E4C441" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <h1>Our Month</h1>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=dGhlamVua2luczk3NUBnbWFpbC5jb20&src=dDFrZWpsdWVkamJwanV1bG45ZWMyNHRpaWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=dWgzOTdmNTE4anU5MjVqNXNucWtxMTZ1dG4yZDdiYWVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=MDF1NGlyczE3dGFwOTlzM2lxazA0MTdwZ21qdnE2OHZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%230B8043&color=%23D50000&color=%23E4C441" style="border:solid 1px #777" width="1000" height="600" frameborder="0" scrolling="no"></iframe>
   </article>
 </section>
 
 <footer>
-  <p>Footer</p>
+  <p><marquee behavior="scroll" direction="right" scrollamount="12" ></marquee></p>
 </footer>
 
 </body>
-<script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
-        <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4144764',appid: '04741469033a4a2d9f3f36e3346e9036',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-       
+  <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+  <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '4144764',appid: '04741469033a4a2d9f3f36e3346e9036',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+  <script class="todaydate_script">
+    const d= new Date();
+    document.getElementById("todaydate").innerHTML=d;
+  </script>
+
 </html>
 
