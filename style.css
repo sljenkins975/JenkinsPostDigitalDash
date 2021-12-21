@@ -1,15 +1,17 @@
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: #ccc;
 }
   /* width788 */
 /* Style the header */
 header {
   background-color: #576675;
-  padding: 30px;
+  padding: 1px;
   text-align: center;
   font-size: 35px;
   color: white;
@@ -30,7 +32,7 @@ article {
   width: 60%;
   color: black;
   background-color: rgba(204, 204, 204, 0.89);
-  
+  height: 700px; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -43,7 +45,8 @@ section::after {
 /* Style the footer */
 footer {
   background-color: #576675;
-  padding: 10px;
+  height: 60px;
+  padding: 5px;
   text-align: center;
   color: white;
 }
@@ -51,13 +54,13 @@ footer {
   display: grid;
   grid-template-columns: auto ;
   background-color: #576675;
-  grid-auto-rows: 350px;
+  grid-auto-rows: 345px;
   padding: 1;
 }
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 10px;
   font-size: 20px;
   /* text-align: center; */
 }
