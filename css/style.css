@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 
-}
 html, body  {
   width: 100%;
   height: 100%;
@@ -24,7 +23,7 @@ header {
 }
 
 /* Create two columns/boxes that floats next to each other */
-sidebar {
+.sidebar {
   float: left;
   width: 60%;
   height: 600px; /* only for demonstration, should be removed */
@@ -70,10 +69,10 @@ footer {
   font-size: 20px;
   /* text-align: center; */
 }
-.gcalender {
+iframe{
 border:solid 1px #777;
 width:100%;
-height:700px;
+height:100%;
 }
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
