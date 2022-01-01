@@ -24,7 +24,7 @@ header {
 sidebar {
   float: left;
   width: 20%;
-  height: 60px; /* only for demonstration, should be removed */
+  height: 600px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 5px;
 }
@@ -69,7 +69,7 @@ grid-item {
 }
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 100px) {
+@media (max-width: 600px) {
   nav, article {
     width: 100%;
     height: auto;
