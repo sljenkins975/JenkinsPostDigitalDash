@@ -25,7 +25,7 @@ header {
 /* Create two columns/boxes that floats next to each other */
 .sidebar {
   float: left;
-  width: 60%;
+  width: 40%;
   height: 600px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 5px;
@@ -34,7 +34,7 @@ header {
 article {
   float: left;
   padding: 2px;
-  width: 40%;
+  width: 60%;
   color: black;
   background-color: rgba(204, 204, 204, 0.89);
   height: 600px; /* only for demonstration, should be removed */
