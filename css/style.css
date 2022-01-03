@@ -12,7 +12,7 @@ body{
 
 header {
   background-color: #576675;
-  padding: 1px;
+  padding: 5px;
   text-align: center;
   font-family: "Brush Script MT", cursive;
   font-weight: bold ;
@@ -24,7 +24,7 @@ header {
 sidebar {
   float: left;
   width: 40%;
-  height: 600px; /* only for demonstration, should be removed */
+  height: 800px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 5px;
 }
@@ -35,7 +35,7 @@ article {
   width: 60%;
   color: black;
   background-color: rgba(204, 204, 204, 0.89);
-  height: 600px; /* only for demonstration, should be removed */
+  height: 800px; /* only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -57,7 +57,7 @@ grid-container {
   display: grid;
   grid-template-columns: auto ;
   background-color: #576675;
-  grid-auto-rows: 295px;
+  grid-auto-rows: 357px;
   padding: 1;
 }
 grid-item {
